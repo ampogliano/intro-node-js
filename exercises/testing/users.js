@@ -18,7 +18,6 @@ const findUser = (id) => new Promise((resolve, reject) => {
 
 // simulate async db call with promise
 const deleteUser = (id) => new Promise((resolve, reject) => {
-  const id = fixId(id)
   const i = users.findIndex(user => user.id === id)
 
   if (i < 0) {
@@ -31,5 +30,6 @@ const deleteUser = (id) => new Promise((resolve, reject) => {
 
 module.exports = {
   findUser,
-  deleteUser
+  deleteUser,
+  users
 }
